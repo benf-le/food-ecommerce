@@ -3,7 +3,7 @@
     <div class="ltn__utilize-menu-inner ltn__scrollbar">
         <div class="ltn__utilize-menu-head">
             <div class="site-logo">
-                <a href="\"><img src="{{ asset('assets/clients/img/logo.png') }}" alt="Logo"></a>
+                <a href="{{ route('home') }}"><img src="{{ asset('assets/clients/img/logo.png') }}" alt="Logo"></a>
             </div>
             <button class="ltn__utilize-close">×</button>
         </div>
@@ -15,7 +15,7 @@
         </div>
         <div class="ltn__utilize-menu">
             <ul>
-                <li><a href="\">Trang chủ</a> </li>
+                <li><a href="{{ route('home') }}">Trang chủ</a> </li>
                 <li><a href="javascript:void(0)">Về chúng tôi</a>
                     <ul class="sub-menu">
                         <li><a href="{{ route('about') }}">Về chúng tôi</a></li>

@@ -15,7 +15,7 @@ class DashboardController extends Controller
     public function index()
     {
         $users = User::where('role_id', 3)->latest()->get();
-        $categories = Category::with('products')->get();
+        $categories = Category::withCount('products')->get();
         $products = Product::where('stock', '>', 0)->get();
         $orders = Order::with('shippingAddress')->latest()->get();
 

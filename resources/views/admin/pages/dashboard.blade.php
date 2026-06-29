@@ -80,7 +80,7 @@
                                 <td>
                                     <canvas class="canvasDoughnutCategory" height="140" width="140"
                                         data-labels='@json($categories->pluck('name'))'
-                                        data-counts="@json($categories->map(fn($category) => $category->products->count()))"
+                                        data-counts="@json($categories->map(fn($category) => $category->products_count))"
                                         style="margin: 15px 10px 10px 0"></canvas>
                                 </td>
                                 <td>
@@ -93,7 +93,7 @@
                                                             style="color: {{ ['#BDC3C7', '#9B59B6', '#E74C3C', '#26B99A', '#3498DB'][$index % 5] }}"></i>{{ $category->name }}
                                                     </p>
                                                 </td>
-                                                <td>{{ $category->products->count() }}</td>
+                                                <td>{{ $category->products_count }}</td>
                                             </tr>
                                         @endforeach
                                     </table>

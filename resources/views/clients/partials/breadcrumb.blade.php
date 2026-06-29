@@ -4,15 +4,9 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <div class="ltn__breadcrumb-inner ltn__breadcrumb-inner-2 justify-content-between">
+                <div class="ltn__breadcrumb-inner ltn__breadcrumb-inner-2 justify-content-center text-center">
                     <div class="section-title-area ltn__section-title-2">
                         <h1 class="section-title white-color">@yield('breadcrumb')</h1>
-                    </div>
-                    <div class="ltn__breadcrumb-list">
-                        <ul>
-                            <li><a href="\">Trang chủ</a></li>
-                            <li>@yield('breadcrumb')</li>
-                        </ul>
                     </div>
                 </div>
             </div>

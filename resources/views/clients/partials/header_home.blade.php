@@ -49,7 +49,7 @@
                 <div class="col">
                     <div class="site-logo-wrap">
                         <div class="site-logo">
-                            <a href="\"><img src="{{ asset('assets/clients/img/logo.png') }}" alt="Logo"></a>
+                            <a href="{{ route('home') }}"><img src="{{ asset('assets/clients/img/logo.png') }}" alt="Logo"></a>
                         </div>
                     </div>
                 </div>
@@ -58,7 +58,7 @@
                         <nav>
                             <div class="ltn__main-menu">
                                 <ul>
-                                    <li class="menu-icon"><a href="\">Trang chủ</a> </li>
+                                    <li class="menu-icon"><a href="{{ route('home') }}">Trang chủ</a> </li>
                                     <li class="menu-icon"><a href="javascript:void(0)">Về chúng tôi</a>
                                         <ul>
                                             <li><a href="{{ route('about') }}">Về chúng tôi</a></li>

@@ -11,7 +11,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $categories = Category::with('products')->get();
+        $categories = Category::with(['products.firstImage', 'products.reviews'])->get();
         foreach ($categories as $index => $category) {
             foreach ($category->products as $product) {
                 $product->image_url = $product->firstImage?->image_path ? 

@@ -585,51 +585,53 @@ $(document).ready(function () {
         totalPriceText.replace(/\./g, "").replace(" ₫", "")
     );
 
-    paypal
-        .Buttons({
-            createOrder: function (data, actions) {
-                return actions.order.create({
-                    purchase_units: [
-                        {
-                            amount: {
-                                value: (totalPriceNumber / 25000).toFixed(2),
+    if (typeof paypal !== "undefined") {
+        paypal
+            .Buttons({
+                createOrder: function (data, actions) {
+                    return actions.order.create({
+                        purchase_units: [
+                            {
+                                amount: {
+                                    value: (totalPriceNumber / 25000).toFixed(2),
+                                },
                             },
-                        },
-                    ],
-                });
-            },
-            onApprove: function (data, actions) {
-                return actions.order.capture().then(function (details) {
-                    //Send information checkout to server
-                    fetch("/checkout/paypal", {
-                        method: "POST",
-                        headers: {
-                            "Content-Type": "application/json",
-                            "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr(
-                                "content"
-                            ),
-                        },
-                        body: JSON.stringify({
-                            orderID: data.orderID,
-                            payerID: data.payerID,
-                            transactionID: details.id,
-                            amount: details.purchase_units[0].amount.value,
-                            address_id: $("#list_address").val(),
-                        }),
-                    })
-                        .then((response) => response.json())
-                        .then((data) => {
-                            if (data.success) {
-                                toastr.success("Thanh toán thành công.");
-                                window.location.href = "/account";
-                            } else {
-                                alert("Có lỗi xảy ra, vui lòng thử lại.");
-                            }
-                        });
-                });
-            },
-        })
-        .render("#paypal-button-container");
+                        ],
+                    });
+                },
+                onApprove: function (data, actions) {
+                    return actions.order.capture().then(function (details) {
+                        //Send information checkout to server
+                        fetch("/checkout/paypal", {
+                            method: "POST",
+                            headers: {
+                                "Content-Type": "application/json",
+                                "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr(
+                                    "content"
+                                ),
+                            },
+                            body: JSON.stringify({
+                                orderID: data.orderID,
+                                payerID: data.payerID,
+                                transactionID: details.id,
+                                amount: details.purchase_units[0].amount.value,
+                                address_id: $("#list_address").val(),
+                            }),
+                        })
+                            .then((response) => response.json())
+                            .then((data) => {
+                                if (data.success) {
+                                    toastr.success("Thanh toán thành công.");
+                                    window.location.href = "/account";
+                                } else {
+                                    alert("Có lỗi xảy ra, vui lòng thử lại.");
+                                }
+                            });
+                    });
+                },
+            })
+            .render("#paypal-button-container");
+    }
 
     /*********************************************
      *HANDLE RATING PRODUCT

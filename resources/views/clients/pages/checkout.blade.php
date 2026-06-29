@@ -131,3 +131,7 @@
     </div>
 
 @endsection
+
+@section('scripts')
+    <script src="https://www.paypal.com/sdk/js?client-id={{ env('PAYPAL_CLIENT_ID') }}&currency=USD"></script>
+@endsection

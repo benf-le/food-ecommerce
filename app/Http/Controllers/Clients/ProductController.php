@@ -15,17 +15,17 @@ class ProductController extends Controller
 {
     public function index()
     {
-        $categories = Category::with('products')->get();
-        $products = Product::with('firstImage')->where('status', 'in_stock')->paginate(9);
+        $categories = Category::all();
+        $products = Product::with(['firstImage', 'reviews'])->where('status', 'in_stock')->paginate(9);
 
-        $productsHighRate = Product::withAvg('reviews', 'rating')->orderByDesc('reviews_avg_rating')->limit(2)->get();
+        $productsHighRate = Product::with(['firstImage', 'reviews'])->withAvg('reviews', 'rating')->orderByDesc('reviews_avg_rating')->limit(2)->get();
 
         return view('clients.pages.products', compact('categories', 'products', 'productsHighRate'));
     }
 
     public function filter(Request $request)
     {
-        $query = Product::query();
+        $query = Product::with(['firstImage', 'reviews']);
 
         //Filter Category if exist
         if($request->has('category_id') && $request->category_id != '')
@@ -77,7 +77,7 @@ class ProductController extends Controller
         $product = Product::with(['category', 'images', 'reviews.user'])->where('slug', $slug)->firstOrFail();
 
         // Get product in the same
-        $relatedProducts = Product::where('category_id', $product->category_id)
+        $relatedProducts = Product::with(['firstImage', 'reviews'])->where('category_id', $product->category_id)
         ->where('id', '!=', $product->id)
         ->limit(6)
         ->get();
@@ -85,14 +85,14 @@ class ProductController extends Controller
         // Call API on Python to get retlated Products
         try {
             $apiUrl = 'http://127.0.0.1:5555/api/product-recommendation';
-            $response = Http::get($apiUrl, [
+            $response = Http::timeout(1.5)->connectTimeout(1.0)->get($apiUrl, [
                 'product_id' => $product->id
             ]);
 
             if ($response->successful()) {
                 $listId = $response->json('related_products');
 
-                $relatedProducts = Product::whereIn('id', $listId)->get();
+                $relatedProducts = Product::with(['firstImage', 'reviews'])->whereIn('id', $listId)->get();
             }
         } catch (\Throwable $e) {
             \Log::error('Error when call API: ' . $e->getMessage());

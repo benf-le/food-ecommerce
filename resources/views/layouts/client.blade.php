@@ -79,9 +79,7 @@
 
     <script src="{{ asset('assets/clients/js/chat.js') }}"></script>
 
-    <script src="https://www.paypal.com/sdk/js?client-id={{ env('PAYPAL_CLIENT_ID') }}&currency=USD"></script>
-
-    
+    @yield('scripts')
 </body>
 
 </html>
