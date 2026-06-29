@@ -7,7 +7,7 @@
                     <div class="footer-widget footer-about-widget">
                         <div class="footer-logo">
                             <div class="site-logo">
-                                <img src="{{ asset('assets/clients/img/logo.png') }}" alt="Logo">
+                                <img src="{{ asset('assets/clients/img/logo-main.png') }}" alt="Logo">
                             </div>
                         </div>
                         <p>KFood – nơi hội tụ những giá trị dinh dưỡng tinh túy, mang đến thực phẩm sạch cho mọi nhà.</p>

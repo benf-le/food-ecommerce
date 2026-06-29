@@ -3,7 +3,7 @@
     <div class="ltn__utilize-menu-inner ltn__scrollbar">
         <div class="ltn__utilize-menu-head">
             <div class="site-logo">
-                <a href="{{ route('home') }}"><img src="{{ asset('assets/clients/img/logo.png') }}" alt="Logo"></a>
+                <a href="{{ route('home') }}"><img src="{{ asset('assets/clients/img/logo-main.png') }}" alt="Logo"></a>
             </div>
             <button class="ltn__utilize-close">×</button>
         </div>
@@ -31,14 +31,6 @@
         <div class="ltn__utilize-buttons ltn__utilize-buttons-2">
             <ul>
                 <li>
-                    <a href="{{ route('account') }}" title="Tài khoản">
-                        <span class="utilize-btn-icon">
-                            <i class="far fa-user"></i>
-                        </span>
-                        Tài khoản
-                    </a>
-                </li>
-                <li>
                     <a href="{{ route('account') }}" title="Yêu thích">
                         <span class="utilize-btn-icon">
                             <i class="far fa-heart"></i>
@@ -56,14 +48,6 @@
                         Giỏ hàng
                     </a>
                 </li>
-            </ul>
-        </div>
-        <div class="ltn__social-media-2">
-            <ul>
-                <li><a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="#" title="Twitter"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="#" title="Linkedin"><i class="fab fa-linkedin"></i></a></li>
-                <li><a href="#" title="Instagram"><i class="fab fa-instagram"></i></a></li>
             </ul>
         </div>
     </div>

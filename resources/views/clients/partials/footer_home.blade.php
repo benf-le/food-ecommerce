@@ -7,7 +7,7 @@
                     <div class="footer-widget footer-about-widget">
                         <div class="footer-logo">
                             <div class="site-logo">
-                                <img src="{{ asset('assets/clients/img/logo-2.png') }}" alt="Logo">
+                                <img src="{{ asset('assets/clients/img/logo-main.png') }}" alt="Logo">
                             </div>
                         </div>
                         <p>Mỗi sản phẩm tại KFood là kết tinh của chất lượng và niềm tin. Chúng tôi đồng hành cùng bạn

@@ -414,7 +414,7 @@ $(document).ready(function () {
             success: function (response) {
                 $("#add_to_cart_modal-" + productId).modal("show");
                 $("#quick_view_modal-" + productId).modal("hide");
-                $("#cart_count").text(response.cart_count);
+                $(".cart-count-badge").text(response.cart_count);
             },
             error: function (xhr) {
                 alert("Có lỗi xảy ra với ajax addToCart In Detail!");
@@ -464,7 +464,7 @@ $(document).ready(function () {
             data: { product_id: productId },
             success: function (response) {
                 if (response.status) {
-                    $("#cart_count").text(response.cart_count);
+                    $(".cart-count-badge").text(response.cart_count);
                     $(".mini-cart-icon").click();
                 }
             },
