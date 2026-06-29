@@ -66,11 +66,11 @@
                                     <div class="col-sm-4 invoice-col">
                                         Đến:
                                         <address>
-                                            <strong>KongHou</strong>
+                                            <strong>KFood</strong>
                                             <br>470 Trần Đại Nghĩa, Ngũ Hành Sơn
                                             <br>Đà Nẵng
                                             <br>Số điện thoại: +84 386 823 982
-                                            <br>Email: haunc.21it@vku.udn.vn
+                                            <br>Email: khanhhq.21ad@vku.udn.vn
                                         </address>
                                     </div>
                                     <!-- /.col -->

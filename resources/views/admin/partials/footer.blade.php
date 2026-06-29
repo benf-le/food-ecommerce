@@ -1,7 +1,7 @@
 <!-- footer content -->
 <footer>
     <div class="pull-right">
-        © {{ date('Y') }} KongHou Admin — Bản quyền thuộc về Nguyễn Công Hậu
+        © {{ date('Y') }} KFood Admin — Bản quyền thuộc về Hồ Quốc Khánh
     </div>
     <div class="clearfix"></div>
 </footer>

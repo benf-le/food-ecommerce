@@ -101,7 +101,7 @@
                                     </div>
                                     <hr>
                                     <div class="ltn__safe-checkout">
-                                        <h5>Yên Tâm Khi Thanh Toán Cùng KongHou</h5>
+                                        <h5>Yên Tâm Khi Thanh Toán Cùng KFood</h5>
                                         <img src="{{ asset('assets/clients/img/icons/payment-2.png') }}"
                                             alt="Payment Image">
                                     </div>

@@ -33,7 +33,7 @@
                                 <div class="col-sm-12">
                                     <div class="card-box table-responsive">
                                         <p class="text-muted font-13 m-b-30">
-                                            Hệ thống quản trị của KongHou Store được xây dựng như trái tim của toàn bộ
+                                            Hệ thống quản trị của KFood Store được xây dựng như trái tim của toàn bộ
                                             website, nơi mọi chi tiết đều được chăm chút tỉ mỉ. Tại đây, bạn có thể theo dõi
                                             sản phẩm, đơn hàng và khách hàng một cách nhẹ nhàng, trôi chảy. Mỗi thao tác đều
                                             được tinh giản để mang đến cảm giác chuyên nghiệp, tin cậy và đầy cảm hứng trong

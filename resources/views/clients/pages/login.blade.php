@@ -11,7 +11,7 @@
                 <div class="col-lg-12">
                     <div class="section-title-area text-center">
                         <h1 class="section-title">Đăng Nhập <br>Tài Khoản Của Bạn</h1>
-                        <p>Chào mừng bạn quay lại với KongHou! <br>
+                        <p>Chào mừng bạn quay lại với KFood! <br>
                             Hãy đăng nhập để tiếp tục mua sắm những sản phẩm tươi sạch và chất lượng nhất.</p>
                     </div>
                 </div>
@@ -47,7 +47,7 @@
                     <div class="account-create text-center pt-50">
                         <h4>BẠN CHƯA CÓ TÀI KHOẢN?</h4>
                         <p>Đăng ký ngay để lưu sản phẩm yêu thích, <br>
-                            nhận gợi ý món ngon mỗi ngày và theo dõi đơn hàng tiện lợi cùng KongHou.</p>
+                            nhận gợi ý món ngon mỗi ngày và theo dõi đơn hàng tiện lợi cùng KFood.</p>
                         <div class="btn-wrapper">
                             <a href="{{ route('register') }}" class="theme-btn-1 btn black-btn">TẠO TÀI KHOẢN</a>
                         </div>

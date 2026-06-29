@@ -10,7 +10,7 @@
                             <li><a href="locations.html"><i class="icon-placeholder"></i> Ngũ Hành Sơn, Đà
                                     Nẵng</a></li>
                             <li><a href="mailto:minhdien.dev@gmail.com?Subject=Contact%20with%20to%20you"><i
-                                        class="icon-mail"></i> haunc.21it@vku.udn.vn</a></li>
+                                        class="icon-mail"></i> khanhhq.21ad@vku.udn.vn</a></li>
                         </ul>
                     </div>
                 </div>

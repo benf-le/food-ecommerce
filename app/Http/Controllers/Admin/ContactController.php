@@ -29,7 +29,7 @@ class ContactController extends Controller
         try {
 
            Mail::send('admin.emails.reply-contact', compact('messageContent'), function ($message) use ($email) {
-               $message->to($email)->subject('KongHou phản hồi liên hệ của khách hàng');
+               $message->to($email)->subject('KFood phản hồi liên hệ của khách hàng');
            });
 
            Contact::where('id', $cid)->update(['is_replied' => 1]);

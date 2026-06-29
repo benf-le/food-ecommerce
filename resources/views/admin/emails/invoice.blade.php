@@ -18,7 +18,7 @@
 
         <!-- Greeting -->
         <p>Chào <strong>{{ $order->shippingAddress->full_name }}</strong>,</p>
-        <p>Cảm ơn bạn đã mua hàng tại <strong>KongHou</strong>. Dưới đây là thông tin đơn hàng của bạn.</p>
+        <p>Cảm ơn bạn đã mua hàng tại <strong>KFood</strong>. Dưới đây là thông tin đơn hàng của bạn.</p>
 
         <!-- From - To -->
         <table style="width:100%; margin:20px 0;">
@@ -35,10 +35,10 @@
                 <td style="vertical-align:top; width:50%;">
                     <h3 style="margin-bottom:5px;">Đến</h3>
                     <p style="margin:0;">
-                        KongHou<br>
+                        KFood<br>
                         470 Trần Đại Nghĩa, Ngũ Hành Sơn, Đà Nẵng<br>
                         SĐT: +84 386 823 982<br>
-                        Email: haunc.21it@vku.udn.vn
+                        Email: khanhhq.21ad@vku.udn.vn
                     </p>
                 </td>
             </tr>
@@ -122,7 +122,7 @@
 
         <!-- Footer -->
         <p style="text-align:center; font-size:14px; color:#777; margin-top:40px;">
-            Cảm ơn bạn đã mua hàng tại KongHou! ❤️
+            Cảm ơn bạn đã mua hàng tại KFood! ❤️
         </p>
 
     </div>

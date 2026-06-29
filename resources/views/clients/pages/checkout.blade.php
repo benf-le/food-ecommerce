@@ -96,7 +96,7 @@
                             <div class="ltn__payment-note mt-30 mb-30">
                                 <p>Thông tin cá nhân của bạn sẽ được sử dụng để xử lý đơn hàng, hỗ trợ trải nghiệm mua sắm
                                     và
-                                    phục vụ các mục đích khác theo chính sách bảo mật của KongHou.</p>
+                                    phục vụ các mục đích khác theo chính sách bảo mật của KFood.</p>
                             </div>
                             <button class="btn theme-btn-1 btn-effect-1 text-uppercase" type="submit" id="order_button_cash">Đặt hàng</button>
                             <div id="paypal-button-container"></div>

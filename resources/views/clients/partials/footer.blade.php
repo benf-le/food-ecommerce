@@ -10,7 +10,7 @@
                                 <img src="{{ asset('assets/clients/img/logo.png') }}" alt="Logo">
                             </div>
                         </div>
-                        <p>KongHou – nơi hội tụ những giá trị dinh dưỡng tinh túy, mang đến thực phẩm sạch cho mọi nhà.</p>
+                        <p>KFood – nơi hội tụ những giá trị dinh dưỡng tinh túy, mang đến thực phẩm sạch cho mọi nhà.</p>
                         <div class="footer-address">
                             <ul>
                                 <li>
@@ -34,7 +34,7 @@
                                         <i class="icon-mail"></i>
                                     </div>
                                     <div class="footer-address-info">
-                                        <p><a href="mailto:haunc.21it@vku.udn.vn">haunc.21it@vku.udn.vn</a>
+                                        <p><a href="mailto:khanhhq.21ad@vku.udn.vn">khanhhq.21ad@vku.udn.vn</a>
                                         </p>
                                     </div>
                                 </li>
@@ -116,7 +116,7 @@
             <div class="row">
                 <div class="col-md-6 col-12">
                     <div class="ltn__copyright-design clearfix">
-                        <p>Bản quyền thuộc về <strong>KongHou</strong> © <span class="current-year"></span>. Mọi quyền
+                        <p>Bản quyền thuộc về <strong>KFood</strong> © <span class="current-year"></span>. Mọi quyền
                             được bảo lưu.</p>
                     </div>
                 </div>

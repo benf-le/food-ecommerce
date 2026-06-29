@@ -169,7 +169,7 @@
                             <h6 class="section-subtitle ltn__secondary-color">Kỹ năng</h6>
                             <h1 class="section-title">Đội Ngũ Chuyên Nghiệp
                                 & Tận Tâm Nhất<span>.</span></h1>
-                            <p>Tại <b>KongHou</b>, chúng tôi không chỉ mang đến thực phẩm sạch – mà còn là sự tận tâm trong
+                            <p>Tại <b>KFood</b>, chúng tôi không chỉ mang đến thực phẩm sạch – mà còn là sự tận tâm trong
                                 từng khâu: từ chọn nguyên liệu, bảo quản đến phục vụ khách hàng.</p>
                         </div>
                         <div class="ltn__progress-bar-inner">

@@ -48,8 +48,8 @@
                             <div class="clearfix"></div>
                             <br />
                             <div>
-                                <h1><i class="fa fa-paw"></i> KONGHOU! </h1>
-                                <p>©2025 Bảo lưu mọi quyền. NGUYỄN CÔNG HẬU. Xem Điều khoản và Chính sách bảo mật của
+                                <h1><i class="fa fa-paw"></i> KFOOD! </h1>
+                                <p>©2025 Bảo lưu mọi quyền. HỒ QUỐC KHÁNH. Xem Điều khoản và Chính sách bảo mật của
                                     chúng tôi.</p>
 
                             </div>

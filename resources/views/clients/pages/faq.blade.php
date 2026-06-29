@@ -21,7 +21,7 @@
                                 <div id="faq-item-2-1" class="collapse" data-parent="#accordion_2">
                                     <div class="card-body">
                                         <p>Bạn chỉ cần chọn sản phẩm mong muốn, thêm vào giỏ hàng và điền thông tin giao
-                                            hàng. Sau khi xác nhận đơn, đội ngũ KongHou sẽ liên hệ xác nhận và giao đến tận
+                                            hàng. Sau khi xác nhận đơn, đội ngũ KFood sẽ liên hệ xác nhận và giao đến tận
                                             nhà nhanh nhất có thể.</p>
                                     </div>
                                 </div>
@@ -42,7 +42,7 @@
                                                 <i class="fa fa-play"></i>
                                             </a>
                                         </div> --}}
-                                        <p>KongHou chấp nhận đổi trả trong vòng <b>3 ngày</b> nếu sản phẩm bị hư hỏng, sai
+                                        <p>KFood chấp nhận đổi trả trong vòng <b>3 ngày</b> nếu sản phẩm bị hư hỏng, sai
                                             loại hoặc không đạt chất lượng như cam kết. Liên hệ ngay với bộ phận chăm sóc
                                             khách hàng để được hỗ trợ nhanh nhất.</p>
                                     </div>
@@ -56,7 +56,7 @@
                                 </h6>
                                 <div id="faq-item-2-3" class="collapse" data-parent="#accordion_2">
                                     <div class="card-body">
-                                        <p>Bạn chỉ cần tạo tài khoản, đăng nhập và duyệt các sản phẩm tươi sạch tại KongHou.
+                                        <p>Bạn chỉ cần tạo tài khoản, đăng nhập và duyệt các sản phẩm tươi sạch tại KFood.
                                             Chọn sản phẩm yêu thích, thêm vào giỏ và đặt hàng – chúng tôi sẽ lo phần còn
                                             lại.</p>
                                     </div>
@@ -66,12 +66,12 @@
                             <div class="card">
                                 <h6 class="collapsed ltn__card-title" data-bs-toggle="collapse"
                                     data-bs-target="#faq-item-2-4" aria-expanded="false">
-                                    Chính sách đổi trả của KongHou
+                                    Chính sách đổi trả của KFood
                                 </h6>
                                 <div id="faq-item-2-4" class="collapse" data-parent="#accordion_2">
                                     <div class="card-body">
                                         <p>Chúng tôi cam kết mang đến sản phẩm chất lượng cao nhất. Nếu có lỗi từ sản phẩm,
-                                            Hậu có thể yêu cầu đổi trả trong vòng 3 ngày kể từ khi nhận hàng. KongHou sẽ
+                                            Hậu có thể yêu cầu đổi trả trong vòng 3 ngày kể từ khi nhận hàng. KFood sẽ
                                             hoàn tiền hoặc đổi sản phẩm mới tùy tình huống cụ thể.</p>
                                     </div>
                                 </div>
@@ -84,7 +84,7 @@
                                 </h6>
                                 <div id="faq-item-2-5" class="collapse" data-parent="#accordion_2">
                                     <div class="card-body">
-                                        <p>KongHou tuyệt đối bảo mật thông tin cá nhân của khách hàng. Mọi dữ liệu chỉ được
+                                        <p>KFood tuyệt đối bảo mật thông tin cá nhân của khách hàng. Mọi dữ liệu chỉ được
                                             sử dụng để phục vụ đơn hàng và chăm sóc sau bán hàng, không chia sẻ cho bên thứ
                                             ba.</p>
                                     </div>
@@ -99,7 +99,7 @@
                                 <div id="faq-item-2-6" class="collapse" data-parent="#accordion_2">
                                     <div class="card-body">
                                         <p>Hãy kiểm tra xem mã còn hạn sử dụng hay không, hoặc có áp dụng cho sản phẩm Hậu
-                                            đang chọn không. Nếu vẫn không được, liên hệ hỗ trợ để KongHou giúp kích hoạt
+                                            đang chọn không. Nếu vẫn không được, liên hệ hỗ trợ để KFood giúp kích hoạt
                                             hoặc cấp mã mới.</p>
                                     </div>
                                 </div>
@@ -112,7 +112,7 @@
                                 </h6>
                                 <div id="faq-item-2-7" class="collapse" data-parent="#accordion_2">
                                     <div class="card-body">
-                                        <p>Có! KongHou hỗ trợ thanh toán bằng thẻ tín dụng, thẻ ghi nợ, ví điện tử và chuyển
+                                        <p>Có! KFood hỗ trợ thanh toán bằng thẻ tín dụng, thẻ ghi nợ, ví điện tử và chuyển
                                             khoản ngân hàng. Tất cả đều được mã hóa bảo mật để đảm bảo an toàn tuyệt đối.
                                         </p>
                                     </div>

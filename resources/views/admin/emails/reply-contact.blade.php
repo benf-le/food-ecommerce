@@ -81,7 +81,7 @@
     <div class="email-wrapper">
 
         <div class="header">
-            <h1>Phản hồi từ Quản trị viên KongHou</h1>
+            <h1>Phản hồi từ Quản trị viên KFood</h1>
         </div>
 
         <div class="content">
@@ -96,7 +96,7 @@
 
         <div class="footer">
             Trân trọng,<br>
-            <b>KongHou Support Team</b><br>
+            <b>KFood Support Team</b><br>
             Cần hỗ trợ thêm? Hãy liên hệ với chúng tôi bất cứ lúc nào.
         </div>
 

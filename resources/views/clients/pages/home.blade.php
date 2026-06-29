@@ -26,9 +26,9 @@
                                         <h6 class="slide-sub-title animated"><img
                                                 src="{{ asset('assets/clients/img/icons/icon-img/1.png') }}" alt="#">
                                             100% Thực phẩm Tươi - Sạch - An toàn</h6>
-                                        <h1 class="slide-title animated ">Tươi Ngon Mỗi Ngày <br> Cùng KongHou</h1>
+                                        <h1 class="slide-title animated ">Tươi Ngon Mỗi Ngày <br> Cùng KFood</h1>
                                         <div class="slide-brief animated">
-                                            <p>Mỗi sản phẩm của KongHou là một lời cam kết về chất lượng, sự an toàn và giá
+                                            <p>Mỗi sản phẩm của KFood là một lời cam kết về chất lượng, sự an toàn và giá
                                                 trị dinh dưỡng. Chúng tôi tin rằng yêu thương bắt đầu từ những điều giản dị
                                                 như bữa cơm nhà mỗi ngày.</p>
                                         </div>
@@ -54,9 +54,9 @@
                                     <div class="slide-item-info-inner ltn__slide-animation">
                                         <h6 class="slide-sub-title ltn__secondary-color animated">// THỰC PHẨM SẠCH & CHẤT
                                             LƯỢNG</h6>
-                                        <h1 class="slide-title animated ">Món Ngon <br> Từ KongHou</h1>
+                                        <h1 class="slide-title animated ">Món Ngon <br> Từ KFood</h1>
                                         <div class="slide-brief animated">
-                                            <p>KongHou mang đến những sản phẩm tươi ngon, an toàn và được chọn lọc kỹ lưỡng
+                                            <p>KFood mang đến những sản phẩm tươi ngon, an toàn và được chọn lọc kỹ lưỡng
                                                 từ những nhà cung cấp uy tín, đảm bảo chất lượng cho từng bữa ăn.</p>
                                         </div>
                                         <div class="btn-wrapper animated">

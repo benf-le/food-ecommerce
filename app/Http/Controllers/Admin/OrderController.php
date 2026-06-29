@@ -51,7 +51,7 @@ class OrderController extends Controller
         try {
 
            Mail::send('admin.emails.invoice', compact('order'), function ($message) use ($order) {
-               $message->to($order->user->email)->subject('Hóa đơn mua hàng từ KongHou của khách hàng: ' . $order->shippingAddress->full_name);
+               $message->to($order->user->email)->subject('Hóa đơn mua hàng từ KFood của khách hàng: ' . $order->shippingAddress->full_name);
            });
 
            return response()->json([

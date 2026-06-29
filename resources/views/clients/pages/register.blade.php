@@ -10,7 +10,7 @@
                 <div class="col-lg-12">
                     <div class="section-title-area text-center">
                         <h1 class="section-title">Đăng Kí <br>Tài Khoản Của Bạn</h1>
-                        <p>Tham gia cùng KongHou để trải nghiệm mua sắm thực phẩm sạch, tươi ngon mỗi ngày.<br>
+                        <p>Tham gia cùng KFood để trải nghiệm mua sắm thực phẩm sạch, tươi ngon mỗi ngày.<br>
                             Nhanh chóng – An toàn – Tiện lợi.</p>
                     </div>
                 </div>
@@ -43,7 +43,7 @@
 
                             <label class="checkbox-inline">
                                 <input type="checkbox" name="checkbox1" value="" required>
-                                Tôi đồng ý để KongHou sử dụng thông tin của tôi nhằm gửi ưu đãi và tin tức phù hợp với sở thích cá nhân.
+                                Tôi đồng ý để KFood sử dụng thông tin của tôi nhằm gửi ưu đãi và tin tức phù hợp với sở thích cá nhân.
                             </label>
                             @error('checkbox1')
                                 <div class="alert alert-danger">{{ $message }}</div>
@@ -51,7 +51,7 @@
 
                             <label class="checkbox-inline">
                                 <input type="checkbox" name="checkbox2" value="" required>
-                                Khi nhấn “Tạo tài khoản”, tôi đồng ý với chính sách bảo mật của KongHou.
+                                Khi nhấn “Tạo tài khoản”, tôi đồng ý với chính sách bảo mật của KFood.
                             </label>
                             @error('checkbox2')
                                 <div class="alert alert-danger">{{ $message }}</div>

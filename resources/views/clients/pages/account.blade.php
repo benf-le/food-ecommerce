@@ -39,7 +39,7 @@
                                                             href="{{ route('logout') }}"><b><u><i>đăng
                                                                         xuất</i></u></b></a></small> nhé.
                                                 </p>
-                                                <p>Chào mừng bạn quay lại với KongHou! Tại đây, bạn có thể xem lại <span>đơn
+                                                <p>Chào mừng bạn quay lại với KFood! Tại đây, bạn có thể xem lại <span>đơn
                                                         hàng gần đây</span>,
                                                     quản lý <span>địa chỉ giao hàng và thanh toán</span>,
                                                     hoặc <span>chỉnh sửa thông tin tài khoản và mật khẩu</span> của mình

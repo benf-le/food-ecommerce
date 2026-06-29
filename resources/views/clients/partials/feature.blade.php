@@ -12,7 +12,7 @@
                                 </div>
                                 <div class="ltn__feature-info">
                                     <h4>Sản phẩm chọn lọc</h4>
-                                    <p>KongHou mang đến những sản phẩm được chọn lựa kỹ càng, tươi ngon và an toàn cho sức khỏe.</p>
+                                    <p>KFood mang đến những sản phẩm được chọn lựa kỹ càng, tươi ngon và an toàn cho sức khỏe.</p>
                                 </div>
                             </div>
                         </div>
@@ -45,7 +45,7 @@
                                 </div>
                                 <div class="ltn__feature-info">
                                     <h4>Giao hàng miễn phí</h4>
-                                    <p>KongHou giao hàng nhanh chóng, tiện lợi và hoàn toàn miễn phí trong khu vực nội thành.</p>
+                                    <p>KFood giao hàng nhanh chóng, tiện lợi và hoàn toàn miễn phí trong khu vực nội thành.</p>
                                 </div>
                             </div>
                         </div>

@@ -18,12 +18,12 @@
                     <div class="about-us-info-wrap">
                         <div class="section-title-area ltn__section-title-2">
                             <h6 class="section-subtitle ltn__secondary-color"> DỊCH VỤ UY TÍN </h6>
-                            <h1 class="section-title">KongHou – Dịch vụ chuyên nghiệp và tận tâm<span>.</span></h1>
+                            <h1 class="section-title">KFood – Dịch vụ chuyên nghiệp và tận tâm<span>.</span></h1>
                             <p>Chúng tôi cam kết mang đến những sản phẩm chất lượng, an toàn cùng dịch vụ chu đáo để khách
-                                hàng luôn an tâm khi lựa chọn KongHou.</p>
+                                hàng luôn an tâm khi lựa chọn KFood.</p>
                         </div>
                         <div class="about-us-info-wrap-inner about-us-info-devide">
-                            <p>KongHou không chỉ chú trọng đến chất lượng sản phẩm mà còn quan tâm đến trải nghiệm của từng
+                            <p>KFood không chỉ chú trọng đến chất lượng sản phẩm mà còn quan tâm đến trải nghiệm của từng
                                 khách hàng.
                                 Chúng tôi luôn nỗ lực mang đến những giá trị thiết thực, góp phần xây dựng cuộc sống xanh và
                                 khỏe mạnh cho mọi gia đình Việt.</p>
@@ -63,7 +63,7 @@
                         </div>
                         <div class="service-item-brief">
                             <h3><a href="javascript:void(0)">Rau củ hữu cơ</a></h3>
-                            <p>KongHou cung cấp các loại rau củ tươi ngon, trồng theo quy trình tự nhiên, không hóa chất độc
+                            <p>KFood cung cấp các loại rau củ tươi ngon, trồng theo quy trình tự nhiên, không hóa chất độc
                                 hại.</p>
                         </div>
                     </div>
@@ -133,7 +133,7 @@
                         </div>
                         <div class="service-item-brief">
                             <h3><a href="javascript:void(0)">Giao hàng tận nơi</a></h3>
-                            <p>KongHou mang thực phẩm sạch đến tận nhà bạn nhanh chóng, an toàn và hoàn toàn miễn phí trong
+                            <p>KFood mang thực phẩm sạch đến tận nhà bạn nhanh chóng, an toàn và hoàn toàn miễn phí trong
                                 nội thành.</p>
                         </div>
                     </div>
@@ -161,7 +161,7 @@
                                             </div>
                                             <div class="ltn__journey-history-info">
                                                 <h3>Khởi đầu từ đam mê nông nghiệp</h3>
-                                                <p>KongHou được hình thành từ niềm tin rằng thực phẩm sạch là nền tảng cho
+                                                <p>KFood được hình thành từ niềm tin rằng thực phẩm sạch là nền tảng cho
                                                     một cuộc sống khỏe mạnh. Từ những trang trại nhỏ, chúng tôi bắt đầu
                                                     trồng trọt theo hướng tự nhiên, không hóa chất.</p>
                                             </div>
@@ -179,8 +179,8 @@
                                                 <img src="{{ asset('assets/clients/img/service/history-1.jpg') }}" alt="#">
                                             </div>
                                             <div class="ltn__journey-history-info">
-                                                <h3>Thành lập thương hiệu KongHou</h3>
-                                                <p>Chúng tôi chính thức ra mắt thương hiệu KongHou – chuyên cung cấp nông
+                                                <h3>Thành lập thương hiệu KFood</h3>
+                                                <p>Chúng tôi chính thức ra mắt thương hiệu KFood – chuyên cung cấp nông
                                                     sản hữu cơ, được chứng nhận an toàn và đạt chuẩn chất lượng quốc tế.</p>
                                             </div>
                                         </div>
@@ -198,7 +198,7 @@
                                             </div>
                                             <div class="ltn__journey-history-info">
                                                 <h3>Mở rộng hệ thống phân phối</h3>
-                                                <p>KongHou bắt đầu hợp tác với các chuỗi siêu thị và cửa hàng thực phẩm
+                                                <p>KFood bắt đầu hợp tác với các chuỗi siêu thị và cửa hàng thực phẩm
                                                     sạch, giúp sản phẩm hữu cơ đến gần hơn với mọi gia đình.</p>
                                             </div>
                                         </div>
@@ -216,7 +216,7 @@
                                             </div>
                                             <div class="ltn__journey-history-info">
                                                 <h3>Chuyển mình cùng công nghệ</h3>
-                                                <p>Ứng dụng nền tảng thương mại điện tử, KongHou phát triển hệ thống bán
+                                                <p>Ứng dụng nền tảng thương mại điện tử, KFood phát triển hệ thống bán
                                                     hàng trực tuyến, giúp khách hàng dễ dàng đặt mua thực phẩm tươi ngon mọi
                                                     lúc mọi nơi.</p>
                                             </div>
@@ -235,7 +235,7 @@
                                             </div>
                                             <div class="ltn__journey-history-info">
                                                 <h3>Thương hiệu thực phẩm xanh hàng đầu</h3>
-                                                <p>KongHou trở thành một trong những thương hiệu dẫn đầu trong lĩnh vực thực
+                                                <p>KFood trở thành một trong những thương hiệu dẫn đầu trong lĩnh vực thực
                                                     phẩm hữu cơ, góp phần lan tỏa lối sống xanh – sạch – bền vững đến cộng
                                                     đồng.</p>
                                             </div>

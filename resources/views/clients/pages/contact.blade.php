@@ -15,7 +15,7 @@
                             <img src="{{ asset('assets/clients/img/icons/10.png') }}" alt="Icon Image">
                         </div>
                         <h3>Địa chỉ Email</h3>
-                        <p>haunc.21it@vku.udn.vn</p>
+                        <p>khanhhq.21ad@vku.udn.vn</p>
                     </div>
                 </div>
                 <div class="col-lg-4">
