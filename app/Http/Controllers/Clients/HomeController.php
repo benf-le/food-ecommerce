@@ -11,12 +11,28 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $categories = Category::with(['products.firstImage', 'products.reviews'])->get();
-        foreach ($categories as $index => $category) {
+        $categories = Category::whereNull('parent_id')
+            ->with([
+                'products.firstImage', 
+                'products.reviews', 
+                'children.products.firstImage', 
+                'children.products.reviews'
+            ])
+            ->get();
+
+        foreach ($categories as $category) {
+            $products = $category->products;
+            
+            foreach ($category->children as $child) {
+                $products = $products->merge($child->products);
+            }
+            
+            $category->setRelation('products', $products);
+
             foreach ($category->products as $product) {
                 $product->image_url = $product->firstImage?->image_path ? 
-                asset('storage/' . $product->firstImage->image_path) : 
-                asset('storage/uploads/products/product-default.png');
+                    asset('storage/' . $product->firstImage->image_path) : 
+                    asset('storage/uploads/products/product-default.png');
             }
         }
 
