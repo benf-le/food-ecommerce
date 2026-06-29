@@ -52,7 +52,7 @@
                             <div class="col-lg-12 align-self-center">
                                 <div class="slide-item-info">
                                     <div class="slide-item-info-inner ltn__slide-animation">
-                                        <h6 class="slide-sub-title ltn__secondary-color animated">// THỰC PHẨM SẠCH & CHẤT
+                                        <h6 class="slide-sub-title ltn__secondary-color animated">THỰC PHẨM SẠCH & CHẤT
                                             LƯỢNG</h6>
                                         <h1 class="slide-title animated ">Món Ngon <br> Từ KFood</h1>
                                         <div class="slide-brief animated">
@@ -333,7 +333,7 @@
                 <div class="col-lg-12">
                     <div class="call-to-action-inner call-to-action-inner-4 text-center">
                         <div class="section-title-area ltn__section-title-2">
-                            <h6 class="section-subtitle ltn__secondary-color">// bạn cần tư vấn? //</h6>
+                            <h6 class="section-subtitle ltn__secondary-color">bạn cần tư vấn?</h6>
                             <h1 class="section-title white-color">0386 823 982</h1>
                         </div>
                         <div class="btn-wrapper">

@@ -47,7 +47,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="section-title-area ltn__section-title-2 text-center">
-                            <h6 class="section-subtitle ltn__secondary-color">// Đặc điểm nổi bật //</h6>
+                            <h6 class="section-subtitle ltn__secondary-color">Đặc điểm nổi bật</h6>
                             <h1 class="section-title">Tại sao chọn KFood<span>.</span></h1>
                         </div>
                     </div>

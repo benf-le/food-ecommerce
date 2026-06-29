@@ -5418,7 +5418,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     position: relative;
 }
 .menu-icon > a::before {
-    content: "\f067";
+    content: "";
     font-size: 8px;
     position: absolute;
     top: 50%;
@@ -15218,7 +15218,7 @@ input.cart-plus-minus-box {
 }
 .footer-menu ul li a::before {
     position: absolute;
-    content: "//";
+    content: "";
     left: 0;
     top: 50%;
     -webkit-transform: translateY(-50%);
@@ -15233,11 +15233,11 @@ input.cart-plus-minus-box {
     color: var(--ltn__secondary-color);
 }
 .footer-menu ul li:hover a {
-    padding-left: 20px;
+    padding-left: 0;
 }
 .footer-menu ul li:hover a::before {
-    opacity: 1;
-    visibility: visible;
+    opacity: 0;
+    visibility: hidden;
     margin-left: 0;
 }
 
