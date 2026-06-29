@@ -1,5 +1,5 @@
 <!-- HEADER AREA START (header-5) -->
-<header class="ltn__header-area ltn__header-5 ltn__header-transparent gradient-color-2">
+<header class="ltn__header-area ltn__header-5 gradient-color-2">
     <!-- ltn__header-top-area start -->
     <div class="ltn__header-top-area d-none">
         <div class="container">

@@ -176,24 +176,91 @@
   border-radius: 5px;
 }
 
-/* Breadcrumb customization to shrink size and center title */
-.ltn__breadcrumb-area-2 {
-    padding-top: 100px !important;
-    padding-bottom: 100px !important;
+/* Add padding-top to main content of internal pages because the breadcrumb is disabled */
+.wrapper > main {
+    padding-top: 60px;
 }
 
 @media (max-width: 767px) {
-    .ltn__breadcrumb-area-2 {
-        padding-top: 80px !important;
-        padding-bottom: 80px !important;
+    .wrapper > main {
+        padding-top: 40px;
     }
 }
 
-.ltn__breadcrumb-area {
-    margin-bottom: 40px !important;
+/* Sleek dark green header background for all pages */
+.ltn__header-middle-area {
+    background-color: #0d3a2f !important; /* Premium dark forest green */
+    border-bottom: 1px solid #0a2e25;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.ltn__breadcrumb-inner-2 {
-    justify-content: center !important;
+.ltn__header-middle-area .ltn__main-menu > ul > li > a,
+.ltn__header-middle-area .ltn__header-options i,
+.ltn__header-middle-area .site-logo-wrap a {
+    color: #ffffff !important;
+}
+
+/* Change header options background (Search, User, Cart, Mobile Menu) to header background color */
+.ltn__header-options-2 .header-search-1,
+.ltn__header-options-2 .ltn__drop-menu > ul > li > a,
+.ltn__header-options-2 .mini-cart-icon a,
+.ltn__header-options-2 .header-wishlist,
+.ltn__header-options-2 .mobile-menu-toggle > a {
+    background: #0d3a2f !important; /* Matches header background */
+    color: #ffffff !important;
+    box-shadow: none !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    border-radius: 8px; /* Slightly rounded corners for a modern, premium look */
+}
+
+/* Hover state for header options */
+.ltn__header-options-2 .header-search-1:hover,
+.ltn__header-options-2 .ltn__drop-menu > ul > li:hover > a,
+.ltn__header-options-2 .mini-cart-icon a:hover,
+.ltn__header-options-2 .header-wishlist:hover,
+.ltn__header-options-2 .mobile-menu-toggle > a:hover {
+    background: var(--ltn__secondary-color) !important; /* Nice contrast on hover */
+    color: var(--white) !important;
+    border-color: var(--ltn__secondary-color) !important;
+}
+
+/* Make sure the icons inside are styled correctly */
+.ltn__header-options-2 .header-search-1 i,
+.ltn__header-options-2 .ltn__drop-menu > ul > li > a i,
+.ltn__header-options-2 .mini-cart-icon a i,
+.ltn__header-options-2 .header-wishlist i {
+    color: #ffffff !important;
+}
+
+/* Mobile menu toggle stroke color */
+.ltn__header-options-2 .mobile-menu-toggle svg path {
+    stroke: #ffffff !important;
+}
+
+/* Premium styling and positioning for the cart quantity badge */
+.ltn__header-options-2 .mini-cart-icon a {
+    position: relative;
+}
+
+.ltn__header-options-2 .mini-cart-icon a sup {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: var(--ltn__secondary-color) !important;
+    color: #ffffff !important;
+    border-radius: 50% !important;
+    width: 20px !important;
+    height: 20px !important;
+    line-height: 20px !important;
+    font-size: 11px !important;
     text-align: center !important;
+    font-weight: 700 !important;
+    border: 2px solid #0d3a2f !important; /* Prevents merging with background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+}
+
+/* Adjust layout on hover to prevent layout shift */
+.ltn__header-options-2 .mini-cart-icon a:hover sup {
+    border-color: var(--ltn__secondary-color) !important;
 }

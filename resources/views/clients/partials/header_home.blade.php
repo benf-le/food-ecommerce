@@ -49,7 +49,7 @@
                 <div class="col">
                     <div class="site-logo-wrap">
                         <div class="site-logo">
-                            <a href="{{ route('home') }}"><img src="{{ asset('assets/clients/img/logo.png') }}" alt="Logo"></a>
+                            <a href="{{ route('home') }}"><img src="{{ asset('assets/clients/img/logo-2.png') }}" alt="Logo"></a>
                         </div>
                     </div>
                 </div>
