@@ -38,9 +38,6 @@
                                 <h3 id="user-name">{{ $user->name }}</h3>
 
                                 <ul class="list-unstyled user_data">
-                                    <li><i class="fa fa-map-marker user-profile-icon"></i> <span
-                                            id="user-address">{{ $user->address }}</span>
-                                    </li>
                                     <li>
                                         <i class="fa fa-briefcase user-profile-icon"></i id="user-email">
                                         <span>{{ $user->email }}</span>
@@ -81,16 +78,6 @@
                                                 value="{{ $user->phone_number }}">
                                         </div>
                                     </div>
-                                    <div class="item form-group">
-                                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="address">Địa chỉ
-                                            <span class="required">*</span>
-                                        </label>
-                                        <div class="col-md-6 col-sm-6 ">
-                                            <input type="text" id="address" name="address" required class="form-control"
-                                                value="{{ $user->address }}">
-                                        </div>
-                                    </div>
-
 
                                     <div class="ln_solid"></div>
                                     <div class="item form-group">

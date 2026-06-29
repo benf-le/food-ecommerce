@@ -107,7 +107,7 @@
                                                                     <td>{{ $address->city }}</td>
                                                                     <td>{{ $address->phone }}</td>
                                                                     <td>
-                                                                        @if ($address->default)
+                                                                        @if ($address->is_default)
                                                                             <span class="badge bg-success">Mặc định</span>
                                                                         @else
                                                                             <form action="{{ route('account.addresses.update', $address->id) }}" method="POST" class="d-inline">
@@ -172,9 +172,9 @@
                                                                     name="phone" required>
                                                             </div>
                                                             <div class="mb-3 form-check">
-                                                                <input type="checkbox" class="form-check-input" id="default"
-                                                                    name="default" required>
-                                                                <label for="default" class="form-label">Đặt làm địa chỉ mặc
+                                                                <input type="checkbox" class="form-check-input" id="is_default"
+                                                                    name="is_default">
+                                                                <label for="is_default" class="form-label">Đặt làm địa chỉ mặc
                                                                     định</label>
                                                             </div>
                                                             <button type="submit"
@@ -219,13 +219,7 @@
                                                             <div class="col-md-6">
                                                                 <label for="ltn__email">Email (không thể thay đổi)</label>
                                                                 <input type="text" name="ltn__email" id="ltn__email"
-                                                                    value="{{ $user->email}}" readonly>
-                                                            </div>
-
-                                                            <div class="col-md-6">
-                                                                <label for="ltn__address">Địa chỉ</label>
-                                                                <input type="text" name="ltn__address" id="ltn__address"
-                                                                    value="{{ $user->address}}" required>
+                                                                    value="{{ $user->email }}" readonly>
                                                             </div>
                                                         </div>
                                                         <div class="btn-wrapper">

@@ -24,13 +24,11 @@ class AccountController extends Controller
             $request->validate([
                 "name" => "required|string|min:3",
                 "phone" => "nullable|string|max:15",
-                "address" => "required|string",
             ]);
 
             $user->update([
                 "name" => $request->name,
                 "phone_number" => $request->phone,
-                "address" => $request->address,
             ]);
 
             return response()->json(["status" => true, "message" => "Cập nhật thông tin thành công"]);

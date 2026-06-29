@@ -11,14 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('shipping_addresses', function(Blueprint $table){
+        Schema::create('reviews', function(Blueprint $table){
             $table->id();
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
-            $table->string('full_name');
-            $table->string('phone');
-            $table->string('address');
-            $table->string('city');
-            $table->boolean('default')->default(false);
+            $table->foreignId('product_id')->constrained('products')->onDelete('cascade');
+            $table->tinyInteger('rating')->unsigned();
+            $table->text('comment')->nullable();
+            $table->unique(['user_id', 'product_id']);
             $table->timestamps();
         });
     }
@@ -28,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('shipping_addresses');
+        Schema::dropIfExists('reviews');
     }
 };

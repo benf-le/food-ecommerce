@@ -27,7 +27,7 @@ class DashboardController extends Controller
 
         $monthlyRevenue = Order::select(
             DB::raw("SUM(total_price) as revenue"),
-            DB::raw("DATE_FORMAT(created_at, '%Y-%m') as month")
+            DB::raw("TO_CHAR(created_at, 'YYYY-MM') as month")
         )->groupBy('month')->orderBy('month', 'ASC')->get();
 
 

@@ -14,8 +14,8 @@ class HomeController extends Controller
         $categories = Category::with('products')->get();
         foreach ($categories as $index => $category) {
             foreach ($category->products as $product) {
-                $product->image_url = $product->firstImage?->image ? 
-                asset('storage/uploads/products/' . $product->firstImage->image) : 
+                $product->image_url = $product->firstImage?->image_path ? 
+                asset('storage/' . $product->firstImage->image_path) : 
                 asset('storage/uploads/products/product-default.png');
             }
         }

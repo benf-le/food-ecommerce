@@ -207,7 +207,7 @@
                                                                                     class="image-preview-container image-preview-listproduct"
                                                                                     data-id="{{ $product->id }}">
                                                                                     @foreach ($product->images as $image)
-                                                                                        <img src="{{ asset('storage/' . $image->image) }}"
+                                                                                        <img src="{{ asset('storage/' . $image->image_path) }}"
                                                                                             alt="Ảnh sản phẩm" style="width: 100px; height: 100px; object-fit: cover; margin: 5px;">
                                                                                     @endforeach
                                                                                 </div>

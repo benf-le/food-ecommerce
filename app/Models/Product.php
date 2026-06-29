@@ -9,7 +9,7 @@ class Product extends Model
 {
      use HasFactory;
 
-    protected $fillable = ['name', 'slug', 'category_id', 'description', 'price', 'stock', 'status', 'unit'];
+    protected $fillable = ['name', 'slug', 'category_id', 'description', 'price', 'stock', 'status', 'unit', 'thumbnail'];
 
     protected $appends = ['image_url', 'average_rating'];
 
@@ -30,7 +30,7 @@ class Product extends Model
 
     public function firstImage()
     {
-        return $this->hasOne(ProductImage::class)->orderBy('id', 'ASC');
+        return $this->hasOne(ProductImage::class)->where('is_primary', true)->orderBy('sort_order', 'ASC');
     }
 
     public function reviews()
@@ -40,7 +40,12 @@ class Product extends Model
 
     public function getImageUrlAttribute()
     {
-        return $this->firstImage?->image ? asset('storage/'. $this->firstImage->image) : asset('storage/uploads/products/product-default.png');
+        if ($this->thumbnail) {
+            return asset('storage/' . $this->thumbnail);
+        }
+        return $this->firstImage?->image_path
+            ? asset('storage/' . $this->firstImage->image_path)
+            : asset('storage/uploads/products/product-default.png');
     }
 
     public function getAverageRatingAttribute()

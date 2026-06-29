@@ -61,8 +61,8 @@ class ProductController extends Controller
         $products = $query->paginate(9);
 
         // foreach ($products as $product) {
-        //     $product->image_url = $product->firstImage?->image ?
-        //         asset('storage/uploads/products/' . $product->firstImage->image) :
+        //     $product->image_url = $product->firstImage?->image_path ?
+        //         asset('storage/' . $product->firstImage->image_path) :
         //         asset('storage/uploads/products/product-default.png');
         // }
 

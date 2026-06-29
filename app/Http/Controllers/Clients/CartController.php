@@ -56,7 +56,7 @@ class CartController extends Controller
                     'price' => $product->price,
                     'quantity' => $request->quantity,
                     'stock' => $product->stock,
-                    'image' => $product->images->first()->image ?? 'uploads/products/product-default.png'
+                    'image' => $product->images->first()->image_path ?? 'uploads/products/product-default.png'
                 ];
             }
 
@@ -117,7 +117,7 @@ class CartController extends Controller
                     'price' => $item->product->price,
                     'quantity' => $item->quantity,
                     'stock' => $item->product->stock,
-                    'image' => $item->product->images->first()->image?? 'uploads/products/product-default.png',
+                    'image' => $item->product->images->first()->image_path ?? 'uploads/products/product-default.png',
                 ];
             })->toArray();
         } else {

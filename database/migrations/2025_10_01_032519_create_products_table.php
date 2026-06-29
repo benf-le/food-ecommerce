@@ -15,12 +15,13 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('slug')->unique();
-            $table->foreignId('category_id')->constrained('categories')->onDelete('cascade');
+            $table->foreignId('category_id')->constrained('categories')->onDelete('restrict');
             $table->text('description')->nullable();
-            $table->decimal('price', 10, 2);
+            $table->decimal('price', 12, 2);
             $table->integer('stock')->default(0);
-            $table->string('status')->default('in_stock');
-            $table->string('unit')->nullable(); // unit: kg, bó, túi,...
+            $table->enum('status', ['in_stock', 'out_of_stock', 'discontinued'])->default('in_stock');
+            $table->string('unit')->nullable();
+            $table->string('thumbnail')->nullable();
             $table->timestamps();
         });
     }

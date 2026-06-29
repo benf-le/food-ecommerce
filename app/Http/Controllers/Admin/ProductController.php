@@ -46,6 +46,7 @@ class ProductController extends Controller
 
         // Handle Image Uploads (if any)
         if ($request->hasFile('images')) {
+            $index = 0;
             foreach ($request->file('images') as $image) {
                 $imageName = time() . '_' . uniqid() . '.' . $image->getClientOriginalExtension();
                 $path = "uploads/products/" . $imageName;
@@ -57,8 +58,15 @@ class ProductController extends Controller
                 // Save image path to database (assuming a ProductImage model exists)
                 ProductImage::create([
                     'product_id' => $product->id,
-                    'image' => $path,
+                    'image_path' => $path,
+                    'is_primary' => $index === 0 ? 1 : 0,
+                    'sort_order' => $index,
                 ]);
+
+                if ($index === 0) {
+                    $product->update(['thumbnail' => $path]);
+                }
+                $index++;
             }
         }
 
@@ -101,12 +109,13 @@ class ProductController extends Controller
             //Delete old images
             $oldImage = ProductImage::where('product_id', $product->id)->get();
             foreach ($oldImage as $image) {
-                Storage::disk('public')->delete($image->image);
+                Storage::disk('public')->delete($image->image_path);
             }
 
             //Remove old image database records
             ProductImage::where('product_id', $product->id)->delete();
 
+            $index = 0;
             foreach ($request->file('images') as $image) {
                 $imageName = time() . '_' . uniqid() . '.' . $image->getClientOriginalExtension();
                 $path = "uploads/products/" . $imageName;
@@ -118,8 +127,15 @@ class ProductController extends Controller
                 // Save image path to database (assuming a ProductImage model exists)
                 ProductImage::create([
                     'product_id' => $product->id,
-                    'image' => $path,
+                    'image_path' => $path,
+                    'is_primary' => $index === 0 ? 1 : 0,
+                    'sort_order' => $index,
                 ]);
+
+                if ($index === 0) {
+                    $product->update(['thumbnail' => $path]);
+                }
+                $index++;
             }
         }
 
@@ -136,7 +152,7 @@ class ProductController extends Controller
                 'stock' => $product->stock,
                 'unit' => $product->unit,
                 'status' => $product->status == 'in_stock' ? 'Còn hàng' : 'Hết hàng',
-                'images' => $product->images->map(fn($img) => asset('storage/' . $img->image)),
+                'images' => $product->images->map(fn($img) => asset('storage/' . $img->image_path)),
             ]
         ]);
     }
@@ -151,7 +167,7 @@ class ProductController extends Controller
 
         // Delete associated images from storage
         foreach ($product->images as $image) {
-            Storage::disk('public')->delete($image->image);
+            Storage::disk('public')->delete($image->image_path);
         }
 
         // Delete the product

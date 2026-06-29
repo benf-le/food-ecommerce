@@ -27,7 +27,6 @@ class AccountController extends Controller
         $request->validate([
             'ltn__name' => 'required|string|max:255',
             'ltn__phone_number' => 'nullable|string|max:15',
-            'ltn__address' => 'nullable|string|max:255',
             'avatar' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
@@ -50,7 +49,6 @@ class AccountController extends Controller
 
         $user->name = $request->input('ltn__name');
         $user->phone_number = $request->input('ltn__phone_number');
-        $user->address = $request->input('ltn__address');
         $user->save();
 
         return response()->json([
@@ -100,12 +98,13 @@ class AccountController extends Controller
             'full_name' => 'required|string|max:255',
             'phone' => 'required|string|max:20',
             'address' => 'required|string|max:255',
+            'ward' => 'nullable|string|max:100',
+            'district' => 'required|string|max:100',
             'city' => 'required|string|max:100',
         ]);
 
-        //if the new address is set as default, update the orther addresses default = 0
-        if ($request->has('default')) {
-            ShippingAddress::where('user_id', Auth::id())->update(['default' => 0]);
+        if ($request->has('is_default')) {
+            ShippingAddress::where('user_id', Auth::id())->update(['is_default' => 0]);
         }
 
         ShippingAddress::create([
@@ -113,8 +112,10 @@ class AccountController extends Controller
             'full_name' => $request->full_name,
             'phone' => $request->phone,
             'address' => $request->address,
+            'ward' => $request->ward,
+            'district' => $request->district,
             'city' => $request->city,
-            'default' => $request->has('default') ? 1 : 0
+            'is_default' => $request->has('is_default') ? 1 : 0,
         ]);
 
         return back()->with('success', 'Thêm địa chỉ thành công');
@@ -125,11 +126,8 @@ class AccountController extends Controller
         //Find address
         $address = ShippingAddress::where('id', $id)->where('user_id', Auth::id())->firstOrFail();
 
-        //Set all address this user default = 0
-        ShippingAddress::where('user_id', Auth::id())->update(['default' => 0]);
-
-        //Update address seleted => default = 1
-        $address->update(['default' => 1]);
+        ShippingAddress::where('user_id', Auth::id())->update(['is_default' => 0]);
+        $address->update(['is_default' => 1]);
 
         toastr()->success('Địa chỉ mặc định đã được cập nhật!');
         return back();

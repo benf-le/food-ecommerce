@@ -19,7 +19,7 @@
                                 <div>
                                     <select name="address_id" id="list_address" class="input-item">
                                         @foreach ($addresses as $address)
-                                            <option value="{{ $address->id }}" {{ $address->default ? 'selected' : '' }}>
+                                            <option value="{{ $address->id }}" {{ $address->is_default ? 'selected' : '' }}>
                                                 {{ $address->full_name }} - {{ $address->address }}
                                             </option>
                                         @endforeach

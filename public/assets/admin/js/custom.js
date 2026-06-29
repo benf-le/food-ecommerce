@@ -645,7 +645,6 @@ $(document).ready(function () {
         let valid = true;
         let name = $("#name").val().trim();
         let phone = $("#phone").val().trim();
-        let address = $("#address").val().trim();
         e.preventDefault();
 
         if (name.length < 3) {
@@ -659,17 +658,13 @@ $(document).ready(function () {
             valid = false;
         }
 
-        if (address === "") {
-            toastr.error("Địa chỉ không được để trống");
-            valid = false;
-        }
+
 
         if(valid) {
             let formData = new FormData();
             formData.append("type", "profile");
             formData.append("name", name);
             formData.append("phone", phone);
-            formData.append("address", address);
 
             updateProfile(formData);
         }
@@ -726,7 +721,6 @@ $(document).ready(function () {
                     toastr.success(response.message);
                     if (formData.get("type") === "profile") {
                         $("#user-name").text(formData.get("name"));
-                        $("#user-address").text(formData.get("address"));
                         $("#user-phone").text(formData.get("phone"));
                     }
 

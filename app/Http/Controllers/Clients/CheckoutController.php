@@ -19,7 +19,7 @@ class CheckoutController extends Controller
     {
         $user = Auth::user();
         $addresses = ShippingAddress::where('user_id', $user->id)->get();
-        $defaultAddress = $addresses->where('default', 1)->first();
+        $defaultAddress = $addresses->where('is_default', 1)->first();
         if (is_null($addresses) || is_null($defaultAddress)) {
             toastr()->error('Vui lòng thêm địa chỉ giao hàng.');
             return redirect()->route('account');
@@ -57,10 +57,18 @@ class CheckoutController extends Controller
         DB::beginTransaction();
 
         try {
+            //Fetch address details
+            $address = ShippingAddress::where('id', $request->address_id)->where('user_id', $user->id)->firstOrFail();
+
             //Create order
             $order = new Order();
             $order->user_id = $user->id;
-            $order->shipping_address_id = $request->address_id;
+            $order->shipping_full_name = $address->full_name;
+            $order->shipping_phone = $address->phone;
+            $order->shipping_address = $address->address;
+            $order->shipping_ward = $address->ward;
+            $order->shipping_district = $address->district;
+            $order->shipping_city = $address->city;
             $order->total_price = $cartItems->sum(fn($item) => $item->quantity * $item->product->price) + 25000;
             $order->status = 'pending'; //default is pending
             $order->save();
@@ -69,6 +77,7 @@ class CheckoutController extends Controller
                 OrderItem::create([
                     'order_id' => $order->id,
                     'product_id' => $item->product->id,
+                    'product_name' => $item->product->name,
                     'quantity' => $item->quantity,
                     'price' => $item->product->price
                 ]);
@@ -118,10 +127,18 @@ class CheckoutController extends Controller
         try {
             $user = Auth::user();
             $cartItems = CartItem::where('user_id', $user->id)->get();
+            //Fetch address details
+            $address = ShippingAddress::where('id', $request->address_id)->where('user_id', $user->id)->firstOrFail();
+
             //Create order
             $order = new Order();
             $order->user_id = $user->id;
-            $order->shipping_address_id = $request->address_id;
+            $order->shipping_full_name = $address->full_name;
+            $order->shipping_phone = $address->phone;
+            $order->shipping_address = $address->address;
+            $order->shipping_ward = $address->ward;
+            $order->shipping_district = $address->district;
+            $order->shipping_city = $address->city;
             $order->total_price = $request->amount * 25000;
             $order->status = 'pending'; //default is pending
             $order->save();
@@ -130,6 +147,7 @@ class CheckoutController extends Controller
                 OrderItem::create([
                     'order_id' => $order->id,
                     'product_id' => $item->product->id,
+                    'product_name' => $item->product->name,
                     'quantity' => $item->quantity,
                     'price' => $item->product->price
                 ]);

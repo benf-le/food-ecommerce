@@ -28,7 +28,6 @@
                                             <h2>{{ $user->name }}</h2>
                                             <p><strong>Email: </strong> {{ $user->email }} </p>
                                             <ul class="list-unstyled">
-                                                <li><i class="fa fa-building"></i> Địa chỉ: {{ $user->address }}</li>
                                                 <li><i class="fa fa-phone"></i> SDT: {{ $user->phone_number }}</li>
                                             </ul>
                                         </div>
