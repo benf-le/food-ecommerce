@@ -32,7 +32,7 @@ class VectorizeProducts extends Command
         $baseUrl = env('RAG_SERVICE_URL', 'http://127.0.0.1:8000');
 
         // Chunk products to avoid memory issues and send bulk requests
-        Product::with('category')->chunk(100, function ($products) use ($baseUrl) {
+        Product::with('category')->chunk(10, function ($products) use ($baseUrl) {
             $payload = [];
             foreach ($products as $product) {
                 $payload[] = [
@@ -46,7 +46,7 @@ class VectorizeProducts extends Command
             }
 
             try {
-                $response = Http::post("{$baseUrl}/ingest/products/bulk", $payload);
+                $response = Http::timeout(300)->post("{$baseUrl}/ingest/products/bulk", $payload);
                 if ($response->successful()) {
                     $this->info("Successfully synced " . count($products) . " products.");
                 } else {
