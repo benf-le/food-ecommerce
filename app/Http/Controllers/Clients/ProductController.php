@@ -28,21 +28,18 @@ class ProductController extends Controller
         $query = Product::with(['firstImage', 'reviews']);
 
         //Filter Category if exist
-        if($request->has('category_id') && $request->category_id != '')
-        {
+        if ($request->has('category_id') && $request->category_id != '') {
             $query->where('category_id', $request->category_id);
         }
 
         //Filter Price if exist
-        if($request->has('min_price') && $request->has('max_price'))
-        {
+        if ($request->has('min_price') && $request->has('max_price')) {
             $query->whereBetween('price', [$request->min_price, $request->max_price]);
         }
 
         //Filter SortBy if exist
-        if($request->has('category_id') && $request->category_id != '')
-        {
-            switch($request->sort_by) {
+        if ($request->has('category_id') && $request->category_id != '') {
+            switch ($request->sort_by) {
                 case 'price_asc':
                     $query->orderBy('price', 'asc');
                     break;
@@ -78,9 +75,9 @@ class ProductController extends Controller
 
         // Get product in the same
         $relatedProducts = Product::with(['firstImage', 'reviews'])->where('category_id', $product->category_id)
-        ->where('id', '!=', $product->id)
-        ->limit(6)
-        ->get();
+            ->where('id', '!=', $product->id)
+            ->limit(6)
+            ->get();
 
         // Call API on Python to get retlated Products
         try {
@@ -104,17 +101,16 @@ class ProductController extends Controller
         $hasPurchased = false;
         $hasReviewed = false;
 
-        if(Auth::check())
-        {
+        if (Auth::check()) {
             $user = Auth::user();
 
-            $hasPurchased = OrderItem::whereHas('order', function($query) use ($user) {
+            $hasPurchased = OrderItem::whereHas('order', function ($query) use ($user) {
                 $query->where('user_id', $user->id)->where('status', 'completed');
             })->where('product_id', $product->id)->exists();
 
-            $hasReviewed  = Review::where('user_id', $user->id)->where('product_id', $product->id)->exists();
+            $hasReviewed = Review::where('user_id', $user->id)->where('product_id', $product->id)->exists();
         }
 
-        return view('clients.pages.product-detail', compact('product', 'relatedProducts', 'hasPurchased', 'hasReviewed','avegareRating'));
+        return view('clients.pages.product-detail', compact('product', 'relatedProducts', 'hasPurchased', 'hasReviewed', 'avegareRating'));
     }
 }
